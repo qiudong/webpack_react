@@ -1,0 +1,54 @@
+Arguments: 
+  /usr/bin/nodejs /usr/bin/yarn add webpack
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  6.3.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "webpack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/qiudong/webpack_react.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/qiudong/webpack_react/issues"
+    },
+    "homepage": "https://github.com/qiudong/webpack_react#readme",
+    "dependencies": {
+      "babel-preset-es2015": "^6.24.1",
+      "babel-preset-react": "^6.24.1",
+      "react": "^15.6.1",
+      "react-dom": "^15.6.1",
+      "webpack-dev-server": "^2.7.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/html-entities: ETIMEDOUT
+      at Timeout._onTimeout (/usr/lib/node_modules/yarn/node_modules/request/request.js:852:19)
+      at tryOnTimeout (timers.js:228:11)
+      at Timer.listOnTimeout (timers.js:202:5)
