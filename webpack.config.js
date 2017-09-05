@@ -2,8 +2,8 @@ var webpack = require('webpack')
 var path = require('path')
 
 module.exports = {
-
-    entry: "./app/static/js/index.js",
+    context: __dirname+"/app/",
+    entry: "./static/js/index.js",
     output: {
         path: __dirname + "/app/",
         filename: 'bundle.js'
@@ -23,7 +23,9 @@ module.exports = {
                 loader: ['style-loader','css-loader','sass-loader'],
                 exclude: '/node_modules/'
 
-            }
+            },
+            {test: /\.(png|jpg|svg|gif)$/, loader: 'url-loader?limit=25000&name=public/[name][hash:8].[ext]'},//指定图片路径
+
         ]
 
     }

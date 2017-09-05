@@ -9811,6 +9811,11 @@ var Login = function (_React$Component) {
                     'div',
                     { className: 'text' },
                     'sfdsfdsf'
+                ),
+                _react2.default.createElement(
+                    'image',
+                    { src: './../../../static/img/a.jpg' },
+                    ' '
                 )
             );
         }
