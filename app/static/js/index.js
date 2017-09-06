@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Login from '../../pages/user/login/Login.jsx'
 
-import UrlRouter from '../../router/UrlRouter.jsx'
+import AuthExample from '../../router/Redirects.jsx'
 
 ReactDOM.render(
-    <UrlRouter />,
+    <AuthExample />,
     document.getElementById("app")
 )
