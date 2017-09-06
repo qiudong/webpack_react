@@ -27,6 +27,10 @@ module.exports = {
             {test: /\.(png|jpg|svg|gif)$/, loader: 'url-loader?limit=25000&name=public/[name][hash:8].[ext]'},//指定图片路径
         ]
 
+    },
+    devServer:{
+        historyApiFallback: true,
     }
+
 
 }
