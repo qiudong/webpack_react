@@ -24460,7 +24460,7 @@ var _reactRouterDom = __webpack_require__(210);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var UrlRouter = function UrlRouter() {
+var ParamsExample = function ParamsExample() {
     _react2.default.createElement(
         _reactRouterDom.BrowserRouter,
         null,
@@ -24468,31 +24468,52 @@ var UrlRouter = function UrlRouter() {
             'div',
             null,
             _react2.default.createElement(
+                'h2',
+                null,
+                'Accounts'
+            ),
+            _react2.default.createElement(
                 'ul',
                 null,
                 _react2.default.createElement(
                     'li',
                     null,
-                    _react2.default.createElement(_reactRouterDom.Link, { to: '/link1' })
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/netflix' },
+                        'Netflix'
+                    )
                 ),
                 _react2.default.createElement(
                     'li',
                     null,
-                    _react2.default.createElement(_reactRouterDom.Link, { to: '/link2' })
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/zillow-group' },
+                        'Zillow Group'
+                    )
                 ),
                 _react2.default.createElement(
                     'li',
                     null,
-                    _react2.default.createElement(_reactRouterDom.Link, { to: '/link3' })
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/yahoo' },
+                        'Yahoo'
+                    )
                 ),
                 _react2.default.createElement(
                     'li',
                     null,
-                    _react2.default.createElement(_reactRouterDom.Link, { to: '/link4' })
+                    _react2.default.createElement(
+                        _reactRouterDom.Link,
+                        { to: '/modus-create' },
+                        'Modus Create'
+                    )
                 )
-            )
-        ),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/:id', Component: Child })
+            ),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/:id', component: Child })
+        )
     );
 };
 var Child = function Child(_ref) {
@@ -24509,8 +24530,41 @@ var Child = function Child(_ref) {
         )
     );
 };
+exports.default = ParamsExample;
+/*
 
-exports.default = UrlRouter;
+
+
+import React from 'react'
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
+
+const ParamsExample = () => (
+    <Router>
+        <div>
+            <h2>Accounts</h2>
+            <ul>
+                <li><Link to="/netflix">Netflix</Link></li>
+                <li><Link to="/zillow-group">Zillow Group</Link></li>
+                <li><Link to="/yahoo">Yahoo</Link></li>
+                <li><Link to="/modus-create">Modus Create</Link></li>
+            </ul>
+
+            <Route path="/:id" component={Child}/>
+        </div>
+    </Router>
+)
+
+const Child = ({ match }) => (
+    <div>
+        <h3>ID: {match.params.id}</h3>
+    </div>
+)
+
+export default ParamsExample*/
 
 /***/ }),
 /* 210 */

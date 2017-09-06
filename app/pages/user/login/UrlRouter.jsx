@@ -4,26 +4,24 @@ import {
     Route,
     Link
 } from 'react-router-dom'
-
-const UrlRouter = () => {
+const ParamsExample = () => (
     <Router>
         <div>
+            <h2>Accounts</h2>
             <ul>
-                <li><Link to="/link1"/>link1</li>
-                <li><Link to="/link2"/>link2</li>
-                <li><Link to="/link3"/>link3</li>
-                <li><Link to="/link4"/>link4</li>
+                <li><Link to="/netflix">Netflix</Link></li>
+                <li><Link to="/zillow-group">Zillow Group</Link></li>
+                <li><Link to="/yahoo">Yahoo</Link></li>
+                <li><Link to="/modus-create">Modus Create</Link></li>
             </ul>
-            <Route path="/:id" Component={Child}></Route>
+
+            <Route path="/:id" component={Child}/>
         </div>
-
-
     </Router>
-}
-const Child = ({match}) => {
+)
+const Child = ({match}) => (
     <div>
         <h3>ID: {match.params.id}</h3>
     </div>
-}
-
-export default UrlRouter;
+)
+export default ParamsExample;
