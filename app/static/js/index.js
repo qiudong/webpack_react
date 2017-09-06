@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import AuthExample from '../../router/Redirects.jsx'
+import Custom from '../../router/Custom.jsx'
 
 ReactDOM.render(
-    <AuthExample />,
+    <Custom />,
     document.getElementById("app")
 )
