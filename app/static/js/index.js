@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Login from '../../pages/user/login/Login.jsx'
 
-import BasicRouter from '../../pages/user/login/BasicRouter.jsx'
+import UrlRouter from '../../pages/user/login/UrlRouter.jsx'
 
 ReactDOM.render(
-    <BasicRouter />,
+    <UrlRouter />,
     document.getElementById("app")
 )
