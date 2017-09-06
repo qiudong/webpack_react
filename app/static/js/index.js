@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Custom from '../../router/Custom.jsx'
+import NoMatchExample from '../../router/NoMacth.jsx'
 
 ReactDOM.render(
-    <Custom />,
+    <NoMatchExample />,
     document.getElementById("app")
 )
