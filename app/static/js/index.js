@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import NoMatchExample from '../../router/NoMacth.jsx'
+import RouteConfigExample from '../../router/RouterConfig.jsx'
 
 ReactDOM.render(
-    <NoMatchExample />,
+    <RouteConfigExample />,
     document.getElementById("app")
 )
