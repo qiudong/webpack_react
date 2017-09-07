@@ -13,7 +13,24 @@ import Home from './coms/Home/Home.jsx'
 import Dog from './coms/Dog/Dog.jsx'
 import Cat from './coms/Cat/Cat.jsx'
 
+/**
+ * 配置路由的第一种写法
+ * 问题：
+ * 1. 精确匹配问题
+ * 2. 代码冗余问题
+ * @param routes
+ * @constructor
+ */
 const Detail1 = ({routes}) => (
+    <Router>
+        <div>
+            {routes.map((route, i) => (
+                <RouteWithSubRoutes key={i} {...route}/>
+            ))}
+        </div>
+    </Router>
+)
+const App1 = ({routes}) => (
     <Router>
         <div>
             {routes.map((route, i) => (
@@ -25,26 +42,29 @@ const Detail1 = ({routes}) => (
 const routes = [
     {
         path: '/app',
-        component: App
-    },
-    {
-        path: '/card',
-        component: Card
-    },
-    {
-        path: '/detail',
-        component: Detail1,
+        component: App1,
         routes: [
             {
-                path: '/detail/cat',
-                component: Cat
+                path:'/app/card',
+                component: Card,
             },
             {
-                path: '/detail/dog',
-                component: Dog
+                path: '/app/detail',
+                component: Detail1,
+                routes: [
+                    {
+                        path: '/app/detail/cat',
+                        component: Cat
+                    },
+                    {
+                        path: '/app/detail/dog',
+                        component: Dog
+                    }
+                ]
             }
         ]
-    }
+    },
+
 ]
 
 const RouteWithSubRoutes = (route) => (
