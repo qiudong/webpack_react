@@ -29,7 +29,9 @@ module.exports = {
 
     },
     devServer:{
+        contentBase: "./app",
         historyApiFallback: true,
+        disableHostCheck: true,
     }
 
 

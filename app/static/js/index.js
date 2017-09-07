@@ -6,6 +6,6 @@ import User from '../../pages/user/index.jsx'
 require('../../pages/user/index.jsx')
 require('../../pages/Licai/index.jsx')
 ReactDOM.render(
-    <User />,
+    <RouteConfigExample />,
     document.getElementById("app")
 )
