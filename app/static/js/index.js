@@ -12,6 +12,6 @@ ReactDOM.render(
 )*/
 import React from 'react'
 import ReactDOM from 'react-dom'
-import rouder from '../../router.jsx'
+import rouder from '../../router1.jsx'
 
 ReactDOM.render(rouder,document.getElementById("app") )
