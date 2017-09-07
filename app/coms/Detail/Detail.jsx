@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 class Detail extends Component {
 
+    componentWillMount() {
+
+        console.log(this.props.match.params.id)
+    }
+
     render(){
 
         return(

@@ -25,9 +25,8 @@ const rouder = (
             <Route path="/home" component={Home}></Route>
             <Route path="/detail" render={() => (
                 <div>
-                    <Route path="/detail/card" component={Card}></Route>
-                    <Route path="/detail/" exact component={Detail}></Route>
-
+                  {/*  <Route path="/detail/card" component={Card}></Route>*/}
+                    <Route path="/detail/:id" exact component={Detail}></Route>
                 </div>
 
             )}></Route>

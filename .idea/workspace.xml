@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a18602b-2542-4615-9277-ebc41d593629" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/router1.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/index.js" afterPath="$PROJECT_DIR$/app/static/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/coms/Detail/Detail.jsx" afterPath="$PROJECT_DIR$/app/coms/Detail/Detail.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/router1.jsx" afterPath="$PROJECT_DIR$/app/router1.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,11 +31,21 @@
       <file leaf-file-name="router1.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/router1.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+            <state relative-caret-position="254">
+              <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Detail.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/coms/Detail/Detail.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,7 +132,6 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/app/router/RouterConfig.jsx" />
         <option value="$PROJECT_DIR$/app/coms/Card/Card.jsx" />
-        <option value="$PROJECT_DIR$/app/coms/Detail/Detail.jsx" />
         <option value="$PROJECT_DIR$/app/coms/Home/Home.jsx" />
         <option value="$PROJECT_DIR$/app/coms/Dog/Dog.jsx" />
         <option value="$PROJECT_DIR$/app/coms/Cat/Cat.jsx" />
@@ -131,6 +140,7 @@
         <option value="$PROJECT_DIR$/app/router.jsx" />
         <option value="$PROJECT_DIR$/router1.jsx" />
         <option value="$PROJECT_DIR$/app/static/js/index.js" />
+        <option value="$PROJECT_DIR$/app/coms/Detail/Detail.jsx" />
         <option value="$PROJECT_DIR$/app/router1.jsx" />
       </list>
     </option>
@@ -260,7 +270,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52365000" />
+    <option name="totallyTimeSpent" value="54460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,14 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/coms/Detail/Detail.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/coms/Home/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -734,10 +736,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/coms/Detail/Detail.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/router1.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+        <state relative-caret-position="254">
+          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="40" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
