@@ -51,7 +51,18 @@ export const routes = [
                     },
                     {
                         path: '/app/detail/cat',
-                        component: Cat
+                        component: Child,
+                        routes: [
+                            {
+                                path: '/app/detail/cat',
+                                exact: true,
+                                component: Cat,
+                            },
+                            {
+                                path: '/app/detail/cat/home',
+                                component: Home,
+                            }
+                        ]
                     },
                     {
                         path: '/app/detail/dog',
@@ -66,9 +77,9 @@ export const routes = [
 
 const rouder = ({route}) => (
     <Router>
-        <div>
+        <Switch>
             {renderRoutes(routes)}
-        </div>
+        </Switch>
     </Router>
 )
 
