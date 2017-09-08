@@ -12,46 +12,43 @@ import Detail from './coms/Detail/Detail.jsx'
 import Home from './coms/Home/Home.jsx'
 import Dog from './coms/Dog/Dog.jsx'
 import Cat from './coms/Cat/Cat.jsx'
+import {matchRoutes, renderRoutes} from 'react-router-config'
 
 /**
- * 配置路由的第一种写法
+ * 配置路由的第一种写法(推荐使用)
  * 问题：
- * 1. 精确匹配问题
- * 2. 代码冗余问题
+ * 1. 怎么接入redux
  * @param routes
  * @constructor
  */
-const Detail1 = ({routes}) => (
-    <Router>
-        <div>
-            {routes.map((route, i) => (
-                <RouteWithSubRoutes key={i} {...route}/>
-            ))}
-        </div>
-    </Router>
+const Child = ({route}) => (
+    <div>
+        {renderRoutes(route.routes, {someProp: 'these extra props are optional'})}
+    </div>
 )
-const App1 = ({routes}) => (
-    <Router>
-        <div>
-            {routes.map((route, i) => (
-                <RouteWithSubRoutes key={i} {...route}/>
-            ))}
-        </div>
-    </Router>
-)
-const routes = [
+export const routes = [
     {
         path: '/app',
-        component: App1,
+        component: Child,
         routes: [
             {
-                path:'/app/card',
+                path: '/app',
+                component: App,
+                exact: true,
+            },
+            {
+                path: '/app/card',
                 component: Card,
             },
             {
                 path: '/app/detail',
-                component: Detail1,
+                component: Child,
                 routes: [
+                    {
+                        path: '/app/detail',
+                        component: Detail,
+                        exact: true,
+                    },
                     {
                         path: '/app/detail/cat',
                         component: Cat
@@ -67,18 +64,10 @@ const routes = [
 
 ]
 
-const RouteWithSubRoutes = (route) => (
-    <Route path={route.path} render={props => (
-        <route.component {...props} routes={route.routes}/>
-    )}/>
-)
-
-const rouder = (
+const rouder = ({route}) => (
     <Router>
         <div>
-            {routes.map((route, i) => (
-                <RouteWithSubRoutes key={i} {...route}/>
-            ))}
+            {renderRoutes(routes)}
         </div>
     </Router>
 )
