@@ -13,7 +13,8 @@ import Home from './coms/Home/Home.jsx'
 import Dog from './coms/Dog/Dog.jsx'
 import Cat from './coms/Cat/Cat.jsx'
 import {matchRoutes, renderRoutes} from 'react-router-config'
-
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory()
 /**
  * 配置路由的第一种写法(推荐使用)
  * 问题：
