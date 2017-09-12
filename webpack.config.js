@@ -6,11 +6,11 @@ module.exports = {
     output: {
         path: __dirname + "/build/",
         filename: 'bundle.js',
-        publicPath: "/"
+        publicPath: "/",
+        chunkFilename : '[name]-[id].js',
     },
     module: {
         rules: [
-
             {
                 test: /\.(js||jsx)?$/,
                 loader: "babel-loader",
