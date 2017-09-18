@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 class Card extends Component {
+    componentWillMount() {
+        debugger
+        this.props.history.push('/app/detail')
+    }
 
-    render(){
+        render(){
 
         return(
 

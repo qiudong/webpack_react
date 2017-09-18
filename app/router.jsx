@@ -27,17 +27,13 @@ const Child = ({route}) => (
     </div>
 )
 export const routes = [
-    {
-        path: '/app',
-        component: Child,
-        routes: [
             {
                 path: '/app',
                 component: App,
                 exact: true,
             },
             {
-                path: '/app/card',
+                path: '/app/card/:uuid',
                 component: Card,
             },
             {
@@ -70,16 +66,11 @@ export const routes = [
                     }
                 ]
             }
-        ]
-    },
-
 ]
 
-const rouder = ({route}) => (
+const rouder = () => (
     <Router>
-        <Switch>
             {renderRoutes(routes)}
-        </Switch>
     </Router>
 )
 

@@ -13,5 +13,23 @@ ReactDOM.render(
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Rouder from '../../router.jsx'
+import { createStore } from 'redux';
+import reducers from '../reducers';
+import {Provider} from 'react-redux'
 
-ReactDOM.render(<Rouder/>,document.getElementById("app") )
+const mapStateToProps = (state) => {
+    return {
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+    }
+}
+
+ReactDOM.render(
+    (<Provider store={createStore(reducers)} >
+        <Rouder/>
+    </Provider>
+    )
+    ,document.getElementById("app") )
