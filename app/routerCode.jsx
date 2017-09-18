@@ -7,17 +7,23 @@ import {
     Switch,
     withRouter
 } from 'react-router-dom'
-import App from 'bundle-loader?lazy!../app/coms/App/App.jsx'
+import App from '../app/coms/App/App.jsx'
 import Cat from 'bundle-loader?lazy!../app/coms/Cat/Cat.jsx'
 import Bundle from './Bundle.jsx'
 import {matchRoutes, renderRoutes} from 'react-router-config'
 
-// components load their module for initial visit
-const About = (props) => (
-    <Bundle load={App}>
-        {(About) => <About {...props}/>}
-    </Bundle>
-)
+export const bundlePage = (props)=>(App)=>{
+    return class extends React.Component{
+        render(){
+            return (<Bundle load={App}>
+                {(About) => <About {...props}/>}
+            </Bundle> )
+        }
+
+    }
+}
+
+//const About = bundlePage()(App);
 
 const Dashboard = (props) => (
     <Bundle load={Cat}>
@@ -36,7 +42,7 @@ const routes1 = [
         component: Child,
         routes: [{
             path: '/lender/app',
-            component: About,
+            component: bundlePage()(App),
         },
             {
                 path: 'lender/cat',
